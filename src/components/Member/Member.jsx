@@ -11,7 +11,7 @@ const Member = (props) => {
     ,[])
 
     return(
-        <span> name : {name}</span>
+        <span> name : {props.name}</span>
     );
 }
 
