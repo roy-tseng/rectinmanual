@@ -4,7 +4,9 @@ import {UI_Login_Title} from '../../common/uistrings';
 import {showDebugMessage} from '../../common/consolehelper';
 import Member from '../Member/Member';
 import { useFormik } from 'formik';
-import { Route, Switch,  BrowserRouter as Router, Redirect} from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux'
+import counterEventGenerator from '../../store/events/actionCounter'
+import EventTableDef from '../../store/events/eventTableDef'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -67,8 +69,8 @@ const Login = (props) => {
                         <button type="submit" className="btn btn-primary">{UI_Login_Title.button_login}</button>
                     </Card.Body>
                 </Card>     
-            </div>       
-            </Form>
+            </div>   
+            </Form>                       
         );
     }
 

@@ -13,6 +13,7 @@ const Lobby = () =>{
         <Router>
         <Switch>
             <Route exact path ='/' component={Login}/>
+            <Route exact path ='/member' component={Member}/>
             <Route path ='*' render = {() => PageHelper.page_404 }/>
         </Switch>               
         </Router>
