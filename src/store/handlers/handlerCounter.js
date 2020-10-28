@@ -7,7 +7,7 @@ const handlerConuter = (state = Counter, action) => {
     let result = state;
 
     switch (action.type){
-        case EventTableDef.CounterEvent["+"]:
+        case EventTableDef.CounterEvent.plus:
             result = {...state, value: state.value + 1}
             break;
         default:

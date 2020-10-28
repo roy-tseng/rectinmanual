@@ -11,18 +11,13 @@ const Member = (props) => {
     
     const [name, setName] = useState("default name");
 
-    const styleA= {
-        "":""
-    }
-
     useEffect(()=>{
         props.name && setName(props.name)
     }
     ,[])
 
     function plusValue() {
-
-        dispatch(counterEventGenerator(EventTableDef.CounterEvent["+"], value));
+        dispatch(counterEventGenerator(EventTableDef.CounterEvent.plus, value));
     }
 
     return(

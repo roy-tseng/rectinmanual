@@ -1,7 +1,7 @@
 const EventTableDef = {
 
     CounterEvent : {
-        '+' : 'counter/+',
+        plus : 'counter/+',
     }
 }
 
