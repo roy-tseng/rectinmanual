@@ -8,6 +8,7 @@ import "./member.scss"
 
 const Member = (props) => {
 
+    const [isEquipmentLoad, setEquipment] = useState(false)
     const dispatch = useDispatch()
     const value = useSelector(state => state.Counter.value)
 
@@ -15,11 +16,17 @@ const Member = (props) => {
         dispatch(counterEventGenerator(EventTableDef.CounterEvent.plus, value));
     }
 
+    function getNoRouterRender(){
+        setEquipment(true)                       
+    }
+
     return(
         <>
             <span> name : {props.name}</span><p/>                 
-            <span> value : {value}</span>&nbsp;&nbsp;<button onClick={plusValue}>+</button><p/>
-            <Equipment/>
+            <span> value : {value}</span>&nbsp;&nbsp;
+            <button onClick={plusValue}>+</button>
+            <button onClick={getNoRouterRender}>C</button><p/>
+            {isEquipmentLoad && <Equipment />}
         </>
     );
 }
