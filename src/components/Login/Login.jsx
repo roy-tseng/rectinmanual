@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {Card, Button, Form} from 'react-bootstrap';
-import {UI_Login_Title} from '../../Common/uistrings';
-import {showDebugMessage} from '../../Common/consolehelper';
+import {UI_Login_Title} from '../../common/uistrings';
+import {showDebugMessage} from '../../common/consolehelper';
 import Member from '../Member/Member';
 import { useFormik } from 'formik';
 import { Route, Switch,  BrowserRouter as Router, Redirect} from "react-router-dom";

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Login from "../Login/Login"
 import { Route, Switch,  BrowserRouter as Router, Redirect} from "react-router-dom";
 import Member from "../Member/Member"
-import PageHelper from "../../Common/pagehelper"
+import PageHelper from "../../common/pagehelper"
 
 const Lobby = () =>{
 
