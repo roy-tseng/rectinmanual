@@ -21,7 +21,7 @@ const styleCenter =  {
 
 const Login = (props) => {
 
-    const [isMember, setMemberFlag] = useState(false);
+    const [isMember, isMemberCheck] = useState(false);
 
     const loginFormik = useFormik(
         {
@@ -34,7 +34,7 @@ const Login = (props) => {
                const data = JSON.stringify(values, null, 2);
                console.log(data);
                const result = true;
-               setMemberFlag(result);
+               isMemberCheck(result);
             }
         });
 
@@ -76,7 +76,7 @@ const Login = (props) => {
 
     return (
         <>        
-           { isMember ? <Member {...loginFormik.values}/> : renderLogin() }
+           { isMember ? <Redirect to='/member'></Redirect> : renderLogin() }
         </>
     );
 }

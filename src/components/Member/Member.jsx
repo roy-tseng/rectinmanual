@@ -17,6 +17,7 @@ const Member = (props) => {
     }
 
     function getNoRouterRender(){
+        
         setEquipment(true)                       
     }
 
